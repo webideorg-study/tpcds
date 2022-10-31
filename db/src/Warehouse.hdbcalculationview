@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Warehouse" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Warehouse.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="vital.tpcds::WAREHOUSE">
+    <resourceUri>vital.tpcds::WAREHOUSE</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+<logicalModel id="vital.tpcds::WAREHOUSE">
+  <attributes>
+    <attribute id="W_WAREHOUSE_SK" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="W_WAREHOUSE_SK"/>
+      <keyMapping columnObjectName="WAREHOUSE" columnName="W_WAREHOUSE_SK"/>
+    </attribute>
+    <attribute id="W_WAREHOUSE_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="W_WAREHOUSE_ID"/>
+      <keyMapping columnObjectName="WAREHOUSE" columnName="W_WAREHOUSE_ID"/>
+    </attribute>
+    <attribute id="W_CITY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="W_CITY"/>
+      <keyMapping columnObjectName="WAREHOUSE" columnName="W_CITY"/>
+    </attribute>
+    <attribute id="W_STATE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="W_STATE"/>
+      <keyMapping columnObjectName="WAREHOUSE" columnName="W_STATE"/>
+    </attribute>
+    <attribute id="W_COUNTRY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="W_COUNTRY"/>
+      <keyMapping columnObjectName="WAREHOUSE" columnName="W_COUNTRY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="W_CC_NAME" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="32">
+        <formula>CONCAT('Warehouse# ', &quot;W_WAREHOUSE_SK&quot;)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

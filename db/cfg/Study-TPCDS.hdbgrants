@@ -1,0 +1,22 @@
+{
+  "Study-TPCDS": {
+    "object_owner": {
+      "global_roles": [
+        {
+          "roles": [
+            "SELECT_TPCDS_WITH_GRANT"
+          ]
+        }
+      ]
+    },
+    "application_user": {
+      "global_roles": [
+        {
+          "roles": [
+            "SELECT_TPCDS"
+          ]
+        }
+      ]
+    }
+  }
+}

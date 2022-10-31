@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Item" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Item.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="vital.tpcds::ITEM">
+    <resourceUri>vital.tpcds::ITEM</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+<logicalModel id="vital.tpcds::ITEM">
+  <attributes>
+    <attribute id="I_ITEM_SK" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="I_ITEM_SK"/>
+      <keyMapping columnObjectName="ITEM" columnName="I_ITEM_SK"/>
+    </attribute>
+    <attribute id="I_ITEM_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="I_ITEM_ID"/>
+      <keyMapping columnObjectName="ITEM" columnName="I_ITEM_ID"/>
+    </attribute>
+    <attribute id="I_CURRENT_PRICE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="I_CURRENT_PRICE"/>
+      <keyMapping columnObjectName="ITEM" columnName="I_CURRENT_PRICE"/>
+    </attribute>
+    <attribute id="I_CLASS" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="I_CLASS"/>
+      <keyMapping columnObjectName="ITEM" columnName="I_CLASS"/>
+    </attribute>
+    <attribute id="I_CATEGORY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="I_CATEGORY"/>
+      <keyMapping columnObjectName="ITEM" columnName="I_CATEGORY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="I_CC_NAME" order="6" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="SQL" length="32">
+        <formula>CONCAT('Product ', &quot;I_ITEM_SK&quot;)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

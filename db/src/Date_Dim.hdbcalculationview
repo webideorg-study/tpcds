@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Date_Dim" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="Date"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="vital.tpcds::DATE_DIM">
+    <resourceUri>vital.tpcds::DATE_DIM</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+
+<logicalModel id="vital.tpcds::DATE_DIM">
+  <attributes>
+    <attribute id="D_DATE_SK" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_DATE_SK"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_DATE_SK"/>
+    </attribute>
+    <attribute id="D_DATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_DATE"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_DATE"/>
+    </attribute>
+    <attribute id="D_MOY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_MOY"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_MOY"/>
+    </attribute>
+    <attribute id="D_QOY" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_QOY"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_QOY"/>
+    </attribute>
+    <attribute id="D_YEAR" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_YEAR"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_YEAR"/>
+    </attribute>
+    <attribute id="D_DAY_NAME" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="D_DAY_NAME"/>
+      <keyMapping columnObjectName="DATE_DIM" columnName="D_DAY_NAME"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

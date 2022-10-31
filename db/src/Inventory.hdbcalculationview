@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Inventory" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Inventory"/>
+<localVariables>
+  <variable id="VAR_DATE_REPORT">
+    <descriptions defaultDescription="Date-to-Report"/>
+    <variableProperties datatype="DATE" length="10" scale="NaN" mandatory="true" defaultValue="">
+      <valueDomain type="AttributeValue">
+        <attribute name="D_DATE" resourceUri="vital.tpcds::Date_Dim"/>
+      </valueDomain>
+      <selection type="SingleValue"/>
+    </variableProperties>
+  </variable>
+</localVariables>
+<variableMappings/>
+<dataSources>
+  <DataSource id="vital.tpcds::INVENTORY">
+    <resourceUri>vital.tpcds::INVENTORY</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="INV_DATE_SK"/>
+      <viewAttribute id="INV_ITEM_SK"/>
+      <viewAttribute id="INV_WAREHOUSE_SK"/>
+      <viewAttribute id="INV_QUANTITY_ON_HAND"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="vital.tpcds::INVENTORY"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="INV_DATE_SK$local">
+      <keyMapping columnObjectName="Projection_1" columnName="INV_DATE_SK"/>
+    </attribute>
+    <attribute id="INV_ITEM_SK$local">
+      <keyMapping columnObjectName="Projection_1" columnName="INV_ITEM_SK"/>
+    </attribute>
+    <attribute id="INV_WAREHOUSE_SK$local">
+      <keyMapping columnObjectName="Projection_1" columnName="INV_WAREHOUSE_SK"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="INV_QUANTITY_ON_HAND" order="1" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="INV_QUANTITY_ON_HAND"/>
+      <measureMapping columnObjectName="Projection_1" columnName="INV_QUANTITY_ON_HAND"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+  <sharedDimensions>
+    <logicalJoin associatedObjectUri="vital.tpcds::Date_Dim">
+      <attributes>
+        <attributeRef>INV_DATE_SK$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>D_DATE_SK</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="inner" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference attributeName="D_DATE_SK" hidden="true"/>
+      </associatedAttributeFeatures>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="vital.tpcds::Item">
+      <attributes>
+        <attributeRef>INV_ITEM_SK$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>I_ITEM_SK</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="inner" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference attributeName="I_ITEM_SK" hidden="true"/>
+      </associatedAttributeFeatures>
+    </logicalJoin>
+    <logicalJoin associatedObjectUri="vital.tpcds::Warehouse">
+      <attributes>
+        <attributeRef>INV_WAREHOUSE_SK$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>W_WAREHOUSE_SK</attributeName>
+      </associatedAttributeNames>
+      <properties cardinality="CN_1" joinType="inner" joinOperator="Equal"/>
+      <associatedAttributeFeatures>
+        <attributeReference attributeName="W_WAREHOUSE_SK" hidden="true"/>
+      </associatedAttributeFeatures>
+    </logicalJoin>
+  </sharedDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="262"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="StarJoinViewNodeInput" modelObjectType="repository">
+      <upperLeftCorner x="477" y="17"/>
+      <rectangleSize width="225"/>
+    </shape>
+    <shape modelObjectName="vital.tpcds::Date_Dim" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="816" y="-117"/>
+      <rectangleSize width="186"/>
+    </shape>
+    <shape modelObjectName="vital.tpcds::Item" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="178" y="-8"/>
+      <rectangleSize width="188"/>
+    </shape>
+    <shape modelObjectName="vital.tpcds::Warehouse" modelObjectNameSpace="StarJoinViewNodeSharedCV" modelObjectType="repository">
+      <upperLeftCorner x="785" y="140"/>
+      <rectangleSize width="195"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

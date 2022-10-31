@@ -1,0 +1,146 @@
+{
+  "vital.tpcds::CALL_CENTER": {
+    "target": {
+      "object": "CALL_CENTER",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CATALOG_PAGE": {
+    "target": {
+      "object": "CATALOG_PAGE",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CATALOG_RETURNS": {
+    "target": {
+      "object": "CATALOG_RETURNS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CATALOG_SALES": {
+    "target": {
+      "object": "CATALOG_SALES",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CUSTOMER": {
+    "target": {
+      "object": "CUSTOMER",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CUSTOMER_ADDRESS": {
+    "target": {
+      "object": "CUSTOMER_ADDRESS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::CUSTOMER_DEMOGRAPHICS": {
+    "target": {
+      "object": "CUSTOMER_DEMOGRAPHICS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::DBGEN_VERSION": {
+    "target": {
+      "object": "DBGEN_VERSION",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::HOUSEHOLD_DEMOGRAPHICS": {
+    "target": {
+      "object": "HOUSEHOLD_DEMOGRAPHICS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::INCOME_BAND": {
+    "target": {
+      "object": "INCOME_BAND",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::INVENTORY": {
+    "target": {
+      "object": "INVENTORY",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::ITEM": {
+    "target": {
+      "object": "ITEM",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::PROMOTION": {
+    "target": {
+      "object": "PROMOTION",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::REASON": {
+    "target": {
+      "object": "REASON",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::SHIP_MODE": {
+    "target": {
+      "object": "SHIP_MODE",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::STORE": {
+    "target": {
+      "object": "STORE",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::STORE_RETURNS": {
+    "target": {
+      "object": "STORE_RETURNS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::STORE_SALES": {
+    "target": {
+      "object": "STORE_SALES",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::TIME_DIM": {
+    "target": {
+      "object": "TIME_DIM",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::WAREHOUSE": {
+    "target": {
+      "object": "WAREHOUSE",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::WEB_PAGE": {
+    "target": {
+      "object": "WEB_PAGE",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::WEB_RETURNS": {
+    "target": {
+      "object": "WEB_RETURNS",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::WEB_SALES": {
+    "target": {
+      "object": "WEB_SALES",
+      "schema": "TPCDS"
+    }
+  },
+  "vital.tpcds::WEB_SITE": {
+    "target": {
+      "object": "WEB_SITE",
+      "schema": "TPCDS"
+    }
+  }
+}
