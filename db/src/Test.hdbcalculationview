@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Test" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" evaluateSessionVariablesEarly="true">
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="vital.tpcds::Test" applyPrivilegeType="NONE" dataCategory="DIMENSION" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" evaluateSessionVariablesEarly="true">
 <descriptions defaultDescription="Test"/>
 <localVariables/>
 <variableMappings/>
-<dataSources/>
+<dataSources>
+  <DataSource id="vital.tpcds::T_SALES_NEW">
+    <resourceUri>vital.tpcds::T_SALES_NEW</resourceUri>
+  </DataSource>
+</dataSources>
 <snapshotProcedures/>
-<calculationViews/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="CREATION_DATE"/>
+      <viewAttribute id="CUSTOMER_NAME"/>
+      <viewAttribute id="PRODUCT_NAME"/>
+      <viewAttribute id="QUANTITY"/>
+      <viewAttribute id="PRICE"/>
+      <viewAttribute id="POS_COUNTRY"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="vital.tpcds::T_SALES_NEW"/>
+  </calculationView>
+</calculationViews>
 
-<logicalModel>
-  <attributes/>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ID"/>
+    </attribute>
+    <attribute id="CREATION_DATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATION_DATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CREATION_DATE"/>
+    </attribute>
+    <attribute id="CUSTOMER_NAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CUSTOMER_NAME"/>
+    </attribute>
+    <attribute id="PRODUCT_NAME" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_NAME"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODUCT_NAME"/>
+    </attribute>
+    <attribute id="QUANTITY" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QUANTITY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="QUANTITY"/>
+    </attribute>
+    <attribute id="PRICE" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRICE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRICE"/>
+    </attribute>
+    <attribute id="POS_COUNTRY" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POS_COUNTRY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="POS_COUNTRY"/>
+    </attribute>
+  </attributes>
   <calculatedAttributes/>
   <baseMeasures/>
   <calculatedMeasures/>
-  <restrictedMeasures/>
-  <localDimensions/>
-</logicalModel>
+  <restrictedMeasures/></logicalModel>
 <layout>
   <shapes>
     <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-      <upperLeftCorner x="40" y="85"/>
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
     </shape>
     
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
   </shapes>
 </layout>
 </Calculation:scenario>

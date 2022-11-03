@@ -1,0 +1,4 @@
+VIRTUAL TABLE "vital.tpcds::V_SALES" AT "ERP_MSSQL_Trigger"
+      ."<NULL>"
+      ."REP"
+      ."SALES" 

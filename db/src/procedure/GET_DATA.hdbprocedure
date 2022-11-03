@@ -1,0 +1,15 @@
+PROCEDURE "vital.tpcds.procedure::GET_DATA"( OUT OT_DATA TABLE( FULLNAME NVARCHAR(256),
+                                                                CREATE_CNT INTEGER,
+                                                                CHANGE_CNT INTEGER,
+                                                                COMBINED_CNT INTEGER
+                                                              )
+                                           )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic
+   *************************************/
+END

@@ -1,0 +1,11 @@
+PROCEDURE "vital.tpcds::InitTargetTable"( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   --READS SQL DATA 
+   AS
+BEGIN
+  
+  CREATE COLUMN TABLE "vital.tpcds::T_SALES_NEW" LIKE "vital.tpcds::V_SALES";
+  
+ END
