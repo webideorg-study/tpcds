@@ -1,0 +1,4 @@
+VIRTUAL TABLE "vital.tpcds.DI::V_SALES" AT "MSSQL_TEST"
+      ."<NULL>"
+      ."REP"
+      ."SALES" 

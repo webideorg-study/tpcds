@@ -1,0 +1,4 @@
+VIRTUAL TABLE "vital.tpcds.DI::V_DELTA_LOG" AT "TEST_MSSQL"
+      ."<NULL>"
+      ."REP"
+      ."DELTA_LOG" 

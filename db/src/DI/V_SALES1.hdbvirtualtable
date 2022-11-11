@@ -1,0 +1,4 @@
+VIRTUAL TABLE "vital.tpcds.DI::V_SALES1" AT "MSSQL_TEST_Camel"
+      ."<NULL>"
+      ."REP"
+      ."SALES" 

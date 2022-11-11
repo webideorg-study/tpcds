@@ -1,0 +1,3 @@
+COLUMN TABLE "vital.tpcds.DI::DelteLog" (
+    ID int
+)
